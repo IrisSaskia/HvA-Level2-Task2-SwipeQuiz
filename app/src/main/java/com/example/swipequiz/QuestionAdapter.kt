@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.question_layout.view.*
 
 public class QuestionAdapter(private val questions: List<Question>) : RecyclerView.Adapter<QuestionAdapter.ViewHolder>() {
@@ -24,7 +25,9 @@ public class QuestionAdapter(private val questions: List<Question>) : RecyclerVi
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bind(question : Question){
             itemView.tvQuestion.text = question.sentence
-            
+            itemView.setOnClickListener {
+                Snackbar.make(itemView,"The answer is " + questions[adapterPosition].answer, Snackbar.LENGTH_LONG).show()
+            }
         }
     }
 }

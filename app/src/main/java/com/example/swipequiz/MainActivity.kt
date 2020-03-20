@@ -9,6 +9,8 @@ import androidx.core.content.ContextCompat.getSystemService
 import android.icu.lang.UCharacter.GraphemeClusterBreak.T
 import android.widget.Toast
 import androidx.recyclerview.widget.*
+import com.google.android.material.snackbar.Snackbar
+import kotlinx.android.synthetic.main.question_layout.*
 
 
 class MainActivity : AppCompatActivity() {
@@ -47,7 +49,6 @@ class MainActivity : AppCompatActivity() {
                         questionAdapter.notifyDataSetChanged()
                     } else {
                         questionAdapter.notifyDataSetChanged()
-                        Toast.makeText(applicationContext, getString(R.string.message_incorrect), Toast.LENGTH_LONG).show()
                     }
                 } else {
                     if(questions[position].validation == true) {
@@ -55,7 +56,7 @@ class MainActivity : AppCompatActivity() {
                         questionAdapter.notifyDataSetChanged()
                     } else {
                         questionAdapter.notifyDataSetChanged()
-                        Toast.makeText(applicationContext, getString(R.string.message_incorrect), Toast.LENGTH_LONG).show()
+                        Snackbar.make(tvQuestion, getString(R.string.message_incorrect), Snackbar.LENGTH_LONG).show()
                     }
                 }
 

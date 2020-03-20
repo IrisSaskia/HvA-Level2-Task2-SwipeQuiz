@@ -1,5 +1,4 @@
 <resources>
     <string name="app_name">Swipe Quiz</string>
-    <string name="message_correct">Correct, the question will be removed</string>
-    <string name="message_incorrect">Wrong, the question will not be removed</string>
+    <string name="message_incorrect">Answer is not correct</string>
 </resources>

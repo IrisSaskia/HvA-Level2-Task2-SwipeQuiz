@@ -7,21 +7,21 @@ data class Question(
 ) {
     companion object {
         val QUESTION_SENTENCES = arrayOf(
-            "Moet Scott een jurkje aan?",
-            "Is Pokémon leuk?",
-            "Is Scott stiekem een meisje?"
+            "Scott heeft een jurk aan.",
+            "Pokémon is leuk.",
+            "Scott is een meisje."
         )
 
         val QUESTION_ANSWERS = arrayOf(
+            "Nee",
             "Ja",
-            "Ja",
-            "Ja"
+            "Nee"
         )
 
         val QUESTION_VALIDATIONS = arrayOf(
+            false,
             true,
-            true,
-            true
+            false
         )
     }
 }
